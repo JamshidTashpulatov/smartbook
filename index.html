@@ -230,24 +230,25 @@
     <div class="box-countdown">
         <div class="container">
             <h1 class="text-center py-8">Ajoyib chegirma</h1>
-
-            <ul id="example">
-                <li><span class="days">00</span>
-                    <p class="days_text">Days</p>
+            <ul id="timer" class="my-5">
+                <li><span class="days" id="days"></span>
+                    <p class="days_text">kun</p>
                 </li>
                 <li class="seperator">:</li>
-                <li><span class="hours">00</span>
-                    <p class="hours_text">Hours</p>
+                <li><span class="hours" id="hours"></span>
+                    <p class="hours_text">soat</p>
                 </li>
                 <li class="seperator">:</li>
-                <li><span class="minutes">00</span>
-                    <p class="minutes_text">Minutes</p>
+                <li><span class="minutes" id="minutes"></span>
+                    <p class="minutes_text">daqiqa</p>
                 </li>
                 <li class="seperator">:</li>
-                <li><span class="seconds">00</span>
-                    <p class="seconds_text">Seconds</p>
+                <li><span class="seconds" id="seconds"></span>
+                    <p class="seconds_text">soniya</p>
                 </li>
             </ul>
+
+            <h3 class="text-center price-text">Narx: <span>1190 000 so`m</span> 42% chegirma: <span>690 000 so`m</span></h3>
 
             <div class="form-card mt-4 shadow-md mx-auto">
                 <div>
@@ -271,7 +272,83 @@
                 </div>
             </div>
         </div>
+        <div class="pb-8"></div>
     </div>
+
+    <div class="feedbacks text-center">
+        <div class="container">
+            <div class="py-8">
+                <span class="mt-4">Izohlar</span>
+                <h3 class="pb-4">O’quvchilarimizning <br> biz haqimizdagi fikrlari</h3>
+            </div>
+            <div id="carouselExampleControls" class="carousel mx-auto w-900 slide mt-8" data-ride="carousel">
+                <div class="carousel-inner card feedback-card p-4">
+                    <p class="text-center">
+                        <img src="img/3-layers.png" class="mt-4" alt="Quote">
+                    </p>
+                  <div class="carousel-item active">
+                    <div class="text-block mx-auto py-4">
+                        <p>Assalomu alaykum, audiokurs mualliflari. Sizlarga o'z minnatdorchiligimni izhor etmoqchiman. Men Davlatov Alisher, Q'oqon shahrida istiqomat qilaman. Yoshim 26 da, maktabda 2 yildan buyon o'qituvchi bolib ishlab kelaman.
+                            Interaktiv Arab tili audio kursingiz  ajoyib ekan, hozirda 2 oydan buyon shugullanib kelmoqdaman. Natijalarimdan mumnunman. Oldin bunday oson metodika borligini eshitmagan ekanman.  Smartbook kompaniya yetakchilariga omad tilayman! Men hammaga ushbu usuldan foydalanib o'rganishni tavsiya etaman. </p>
+                        <br>
+                        <strong>Alisher Davlatov</strong>
+                        <span>O’qituvchi</span>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="text-block mx-auto py-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mollis libero ut dolor commodo, at aliquet sem pretium. Nulla porttitor augue ut pellentesque lacinia. Vivamus viverra, lectus vel accumsan varius, tellus diam sodales odio, quis molestie ante mi mollis lorem. Praesent facilisis, ligula sed gravida mollis, nunc nunc porta est, dignissim lacinia velit nunc quis mauris. </p>
+                        <br>
+                        <strong>Alisher Davlatov</strong>
+                        <span>O’qituvchi</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <img src="img/right-arrow_copy.png" alt="Oldingi">
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <img src="img/right-arrow.png" alt="Keyingi">
+                </a>
+              </div>
+
+              <div class="social-banner mt-8">
+                <div class="text-left">
+                    <h3>Bizni ijtimoiy <br>tarmoqlarda kuzating</h3>
+                    <a href="#" class="btn btn-lg btn-t-md btn-orange mt-4">Obuna bo'lish</a>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="container mt-8 partners">
+        <h1>Hamkorlarimiz</h1>
+
+        <div class="d-flex g-4">
+            <div class="partner-card">
+                NaN
+            </div>
+            <div class="partner-card">
+                NaN
+            </div>
+            <div class="partner-card">
+                NaN
+            </div>
+            <div class="partner-card">
+                NaN
+            </div>
+            <div class="partner-card">
+                NaN
+            </div>
+            <div class="partner-card">
+                NaN
+            </div>
+            <div class="partner-card">
+                NaN
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -285,27 +362,72 @@
         crossorigin="anonymous"></script>
 
     <script>
-        $('#example').countdown({
-            date: '12/24/2020 23:59:59'
-        }, function () {
-            alert('Merry Christmas!');
+        // 1598918400 = Unix timestamp for September 01, 2020 00:00:00
+
+        $(document).ready(function () {
+
+            function timeConverter(UNIX_timestamp) {
+                var a = new Date(UNIX_timestamp * 1000);
+                var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                var year = a.getFullYear();
+                var month = months[a.getMonth()];
+                var date = a.getDate();
+                var hour = a.getHours();
+                var min = a.getMinutes();
+                var sec = a.getSeconds();
+                var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
+                // return time;
+                console.log(date);
+
+                $("#timer #days").html(date);
+                $("#timer #hours").html(hour);
+                $("#timer #minutes").html(min);
+                $("#timer #seconds").html(sec);
+            }
+
+            function makeTimer() {
+
+                var endTime = new Date("October 01, 2020 00:00:00");
+                var endTime = (Date.parse(endTime)) / 1000; //replace these two lines with the unix timestamp from the server
+
+                var now = new Date();
+                var now = (Date.parse(now) / 1000);
+
+                var timeLeft = endTime - now;
+
+                var days = Math.floor(timeLeft / 86400);
+                var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+                var Xmas95 = new Date('December 25, 1995 23:15:30');
+                // console.log(Xmas95);
+                // console.log(Date.parse(timeLeft * 1000));
+                var hour = Xmas95.getHours();
+                // console.log(hour);
+
+                var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+                var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+                if (hours < "10") {
+                    hours = "0" + hours;
+                }
+                if (minutes < "10") {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < "10") {
+                    seconds = "0" + seconds;
+                }
+
+                $("#timer #days").html(days);
+                $("#timer #hours").html(hours);
+                $("#timer #minutes").html(minutes);
+                $("#timer #seconds").html(seconds);
+
+            }
+
+            setInterval(function () {
+                makeTimer();
+            }, 1000);
+
         });
-
-        // // Target date
-        // date: null,
-
-        // // time zone
-        // offset: null,
-
-        //     // Countdown text
-        // day: 'Day',
-        // days: 'Days',
-        // hour: 'Hour',
-        // hours: 'Hours',
-        // minute: 'Minute',
-        // minutes: 'Minutes',
-        // second: 'Second',
-        // seconds: 'Seconds'
     </script>
 </body>
 

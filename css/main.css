@@ -123,7 +123,45 @@ img {
     max-width: 780px;
     left: -220px;
     top: -90px;
+    animation: headphone-air 5s infinite;
+    transition: 0.3s ease-in-out;
 }
+
+@keyframes headphone-air {
+    0% {
+      top: -90px;
+    }
+    10% {
+        top: -80px;
+    }
+    20% {
+        top: -70px;
+    }
+    30% {
+        top: -60px;
+    }
+    40% {
+        top: -50px;
+    }
+    50% {
+        top: -60px
+    }
+    60% {
+      top: -70px;
+    }
+    70% {
+        top: -75px;
+    }
+    80% {
+        top: -80px;
+    }
+    90% {
+        top: -85px;
+    }
+    100% {
+        top: -90px;
+    }
+  }
 
 .book {
     position: relative;
@@ -132,8 +170,8 @@ img {
 .book img {
     position: absolute;
     max-width: 900px;
-    left: -251px;
-    top: -208px;
+    left: -1px;
+    top: -68px;
 }
 
 .audio {
@@ -398,6 +436,10 @@ img {
     padding-top: 8rem;
 }
 
+.my-5 {
+    margin: 5rem 0 !important;
+}
+
 .box-countdown h1 {
     color: #112d4e;
     font-size: 48px;
@@ -407,7 +449,20 @@ img {
     letter-spacing: 2.4px;
 }
 
-ul#example {
+.box-countdown .price-text {
+    margin-top: -14px;
+    padding-bottom: 4.30rem;
+    color: #112d4e;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.box-countdown h3 span {
+    font-weight: 700;
+}
+
+ul#timer {
     list-style: none;
     margin: 50px 0;
     padding: 0;
@@ -415,25 +470,22 @@ ul#example {
     text-align: center;
   }
   
-  ul#example li { display: inline-block; }
+  ul#timer li { display: inline-block; }
   
-  ul#example li span {
+  ul#timer li span {
     color: #112d4e;
     font-size: 60px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 24px;
     letter-spacing: 6px;
   }
   
-  ul#example li.seperator {
-    color: #112d4e;
-    font-size: 60px;
-    font-weight: 500;
-    line-height: 14px;
-    vertical-align: top;
+  ul#timer li.seperator {
+    color: transparent;
+    padding-left: 125px;
   }
   
-  ul#example li p {
+  ul#timer li p {
     color: #323232;
     font-size: 14px;
     font-weight: 600;
@@ -448,12 +500,11 @@ ul#example {
 .gift-shape::before {
     position: absolute;
     content: "";
-    background: url(../img/2-layers.png);
-    position: absolute;
+    background: url(../img/gift.png);
     width: 416px;
     height: 150px;
     right: -211px;
-    top: -126px;
+    top: -150px;
     background-position: 17rem;
     background-repeat: no-repeat;
 }
@@ -464,7 +515,7 @@ ul#example {
 .gift-shape-0::before {
     position: absolute;
     content: "";
-    background: url(../img/2-layers.png);
+    background: url(../img/gift.png);
     position: absolute;
     width: 416px;
     height: 150px;
@@ -476,4 +527,130 @@ ul#example {
 
 .form-row {
     padding: 20px 0;
+}
+
+.pb-8 {
+    padding-bottom: 8rem;
+}
+
+.feedbacks {
+    position: relative;
+}
+
+.feedbacks::before {
+    position: absolute;
+    content: "";
+    margin-top: 12rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/map.png);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-position: top;
+    z-index: -1;
+}
+
+.feedbacks span {
+    color: #112d4e;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0.18px;
+}
+
+.feedbacks h3 {
+    color: #112d4e;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 48px;
+}
+
+.feedback-card {
+    border: none;
+    box-shadow: 0 0 87px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: unset !important;
+}
+
+.text-block {
+    width: 640px;
+}
+
+.text-block p {
+    color: #4f4f4f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.36px;
+}
+
+.text-block strong {
+    display: block;
+    color: #323232;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 47.97px;
+    letter-spacing: 0.45px;
+    margin-bottom: -16px;
+}
+
+.text-block span {
+    color: #7d7c7c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 47.97px;
+    letter-spacing: 0.4px;
+}
+
+.btn-t-md {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.37px;
+}
+
+.social-banner {
+    border-radius: 10px;
+    padding: 34px;
+    background: url(../img/2-layers.png);
+    background-position: left;
+    background-size: cover;
+    z-index: 999;
+}
+
+.social-banner h3 {
+    color: #fff;
+}
+
+.w-900 {
+    width: 920px;
+}
+
+.partners h1 {
+    color: #112d4e;
+    font-size: 36px;
+    font-weight: 800;
+    padding: 17px 0;
+}
+
+.partner-card {
+    width: 170px;
+    height: 81px;
+    background-color: #eaf2ff;
+}
+
+.g-4 {
+    gap: 30px;
 }
