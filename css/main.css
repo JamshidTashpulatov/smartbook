@@ -930,3 +930,45 @@ ul#timer {
         margin-top: 10px;
     }
 }
+
+@media (min-width:640px) and (max-width:1440px) {
+    body {
+        overflow-x: hidden;
+    }
+    .footer {
+        width: 100%;
+    }
+
+    .book img {
+        position: relative;
+        max-width: 380px;
+        top: 2rem;
+    }
+    .w-900, .text-block {
+        width: 100%;
+    }
+    .shape-two {
+        display: none;
+    }
+
+    .block-desc, .block-title {
+        margin-left: 0;
+    }
+
+    .box-lg h3 {
+        position: absolute;
+        margin-top: -24px;
+    }
+
+    .box-lg .row {
+        margin-top: 7rem;
+    }
+
+    .shape-right {
+        z-index: -1;
+    }
+
+    .shape-left {
+        display: none;
+    }
+}
