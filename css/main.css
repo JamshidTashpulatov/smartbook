@@ -125,7 +125,7 @@ img {
     top: -90px;
     animation: 
     headphone-air
-    3.5s
+    3.8s
     ease-out
     0s
     alternate
@@ -153,7 +153,7 @@ img {
         top: -50px;
     }
     50% {
-        top: -60px
+        top: -60px;
     }
     60% {
       top: -70px;
@@ -174,7 +174,52 @@ img {
 
 .book {
     position: relative;
+    animation: book-air
+    3.0s
+    ease-out
+    0s
+    alternate
+    infinite
+    none
+    running;
+    transition: 0.2s ease-in-out;
 }
+
+@keyframes book-air {
+    0% {
+      top: -68px;
+    }
+    10% {
+        top: -60px;
+    }
+    20% {
+        top: -55px;
+    }
+    30% {
+        top: -50px;
+    }
+    40% {
+        top: -45px;
+    }
+    50% {
+        top: -40px;
+    }
+    60% {
+      top: -45px;
+    }
+    70% {
+        top: -50px;
+    }
+    80% {
+        top: -55px;
+    }
+    90% {
+        top: -58px;
+    }
+    100% {
+        top: -60px;
+    }
+  }
 
 .book img {
     position: absolute;
@@ -183,8 +228,27 @@ img {
     top: -68px;
 }
 
-.audio {
+
+.audio img {
     position: relative;
+    animation: audio-zoom
+    2.0s
+    ease-out
+    0s
+    alternate
+    infinite
+    none
+    running;
+    transition: 0.2s ease-in-out;;
+}
+
+@keyframes audio-zoom {
+    0% {
+      max-width: 280px;
+    }
+    100% {
+        max-width: 350px;
+    }
 }
 
 .audio img {
