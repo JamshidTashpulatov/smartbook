@@ -76,7 +76,7 @@ img {
     padding-right: 20px;
 }
 
-.arrow-down::before {
+/* .arrow-down::before {
     position: absolute;
     content: "";
     width: 100px;
@@ -86,7 +86,7 @@ img {
     background-repeat: no-repeat;
     right: -4px;
     top: -41px;
-}
+} */
 
 .btn-xlg {
     padding: 17px 37px;
@@ -635,7 +635,7 @@ ul#timer {
     position: absolute;
     content: "";
     margin-top: 12rem;
-    top: 10.5%;
+    top: 18.5%;
     left: 34%;
     transform: translate(-50%, -50%);
     background: url(../img/7-layers.png);
@@ -788,6 +788,10 @@ ul#timer {
 */
 
 @media (max-width:640px){
+
+    .audio {
+        display: none;
+    }
     .navbar-nav {
         padding-top: 24px;
         padding-left: 28px;
@@ -1031,6 +1035,32 @@ ul#timer {
 }
 
 @media (max-width:320px) {
+
+    .audio {
+        display: none;
+    }
+
+    .form-control {
+        margin-top: 4px;
+    }
+    .headphone img {
+        width: 200px; /* width of container */
+        height: 200px; /* height of container */
+        object-fit: cover;
+        object-position: 20% 10px;
+    }
+
+    .audio img {
+        top: 14rem;
+        left: 12rem;
+        max-width: 140px !important;
+        z-index: 1;
+        /* width: -150px; */
+        height: 40px;
+        object-fit: cover;
+        object-position: 20% 10px;
+    }
+
     .footer-b {
         margin-top: 24px !important;
         display: block !important;
@@ -1080,27 +1110,6 @@ ul#timer {
         height: auto !important;
     }
 }
-    .form-control {
-        margin-top: 4px;
-    }
-    .headphone img {
-        width: 200px; /* width of container */
-        height: 200px; /* height of container */
-        object-fit: cover;
-        object-position: 20% 10px;
-    }
-
-    .audio img {
-        top: 14rem;
-        left: 12rem;
-        max-width: 140px !important;
-        z-index: 1;
-        /* width: -150px; */
-        height: 40px;
-        object-fit: cover;
-        object-position: 20% 10px;
-    }
-}
 
 @media (max-width:840px) {
     .footer-b p {
@@ -1140,6 +1149,10 @@ ul#timer {
         position: relative;
         max-width: 380px;
         top: 2rem;
+    } 
+
+    .headphone img {
+        width: 390px;
     }
     .w-900, .text-block {
         width: 100%;
