@@ -18,7 +18,7 @@ img {
 }
 
 .navbar-nav {
-    gap: 50px !important;
+    gap: 90px !important;
 }
 
 .navbar-nav .nav-link {
@@ -1138,6 +1138,10 @@ ul#timer {
 }
 
 @media (min-width:640px) and (max-width:1440px) {
+    .navbar-nav {
+        gap: 90px !important;
+    }
+    
     body {
         overflow-x: hidden;
     }
@@ -1152,7 +1156,7 @@ ul#timer {
     } 
 
     .headphone img {
-        width: 390px;
+        width: 720px;
     }
     .w-900, .text-block {
         width: 100%;

@@ -50,7 +50,8 @@
                     <h1 class="intro-title">Arab tilini qisqa muddatda samarali o’rganish metodikasi</h1>
                     <p class="intro-subtitle mt-4">Barcha yoshdagilar uchun arab tilini qisqa muddatda eshitish orqali
                         o’rganish dasturining keng imkoniyatlari</p>
-                    <a href="#" class="btn btn-xlg btn-orange mt-4">Metodika haqida <img src="img/arrow.png" class="arrow-down" alt="Metodika haqida"></a>
+                    <a href="#" class="btn btn-xlg btn-orange mt-4">Metodika haqida <img src="img/arrow.png"
+                            class="arrow-down" alt="Metodika haqida"></a>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
@@ -90,7 +91,9 @@
                             <input type="text" class="form-control" placeholder="Ismingiz">
                         </div>
                         <div class="col-4 input-block">
-                            <input type="text" class="form-control" pattern="[0-9]*" inputmode="numeric" placeholder="+998">
+                            <span id="userPhone-info" class="info"></span>
+                            <input type="text" class="form-control" pattern="[0-9]*" id="userPhone" required
+                                placeholder="998 90 123 4567" inputmode="numeric" placeholder="+998">
                         </div>
                         <div class="col">
                             <a href="#" class="btn btn-xlg btn-orange btn-block">Buyurtma berish</a>
@@ -249,7 +252,8 @@
                 </li>
             </ul>
 
-            <h3 class="text-center price-text">Narx: <span>1190 000 so`m</span> 42% chegirma: <span>690 000 so`m</span></h3>
+            <h3 class="text-center price-text">Narx: <span>1190 000 so`m</span> 42% chegirma: <span>690 000 so`m</span>
+            </h3>
 
             <div class="form-card mt-4 shadow-md mx-auto">
                 <div>
@@ -263,7 +267,8 @@
                                 <input type="text" class="form-control" placeholder="Ismingiz">
                             </div>
                             <div class="col-4 input-block">
-                                <input type="text" class="form-control" pattern="[0-9]*" inputmode="numeric" placeholder="+998">
+                                <input type="text" class="form-control" pattern="[0-9]*" inputmode="numeric"
+                                    placeholder="+998">
                             </div>
                             <div class="col">
                                 <a href="#" class="btn btn-xlg btn-orange btn-block">Buyurtma berish</a>
@@ -295,65 +300,75 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                          </ol>
+                        </ol>
                         <div class="carousel-inner p-4">
                             <!-- <p class="text-center">
                                 <img src="img/3-layers.png" class="mt-4" alt="Quote">
                             </p> -->
-                          <div class="carousel-item active">
-                            <div class="text-block mr-auto">
-                                <strong class="text-left">Alisher Davlatov</strong>
-                                <p class="job text-left">O’qituvchi</p>
-                                <br>
-                                <p class="text-left f-content">Qisqa vaqt ichida tilni to'liq o'rganish Xorijiy tillarni atigi 6 oy ichida o'rganish imkoniyati aynan shu uslub bilan yanada osonlashadi.</p>
-                                <br>
+                            <div class="carousel-item active">
+                                <div class="text-block mr-auto">
+                                    <strong class="text-left">Alisher Davlatov</strong>
+                                    <p class="job text-left">O’qituvchi</p>
+                                    <br>
+                                    <p class="text-left f-content">Qisqa vaqt ichida tilni to'liq o'rganish Xorijiy
+                                        tillarni atigi 6 oy ichida o'rganish imkoniyati aynan shu uslub bilan yanada
+                                        osonlashadi.</p>
+                                    <br>
+                                </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="text-block mr-auto">
-                                <strong class="text-left">Sabina Muhsinova</strong>
-                                <p class="job text-left">Tikuvchi</p>
-                                <br>
-                                <p class="text-left f-content">Bir kunda 2-2,5 soat eshitib borish bir sutkada 24 soat bo'lib, undan 2-2,5 soatini til o'rganish uchun sarflash kifoya qiladi.</p>
-                                <br>
+                            <div class="carousel-item">
+                                <div class="text-block mr-auto">
+                                    <strong class="text-left">Sabina Muhsinova</strong>
+                                    <p class="job text-left">Tikuvchi</p>
+                                    <br>
+                                    <p class="text-left f-content">Bir kunda 2-2,5 soat eshitib borish bir sutkada 24
+                                        soat bo'lib, undan 2-2,5 soatini til o'rganish uchun sarflash kifoya qiladi.</p>
+                                    <br>
+                                </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="text-block mr-auto">
-                                <strong class="text-left">Murod Kamolov</strong>
-                                <p class="job text-left">O’qituvchi</p>
-                                <br>
-                                <p class="text-left f-content">So'zlarni yodlamasdan til o'rganish shu vaqtgacha til o'rganishda so'z yodlash va eslab qolish muhim edi, endi esa bunday muammolar bo'lmaydi.</p>
-                                <br>
+                            <div class="carousel-item">
+                                <div class="text-block mr-auto">
+                                    <strong class="text-left">Murod Kamolov</strong>
+                                    <p class="job text-left">O’qituvchi</p>
+                                    <br>
+                                    <p class="text-left f-content">So'zlarni yodlamasdan til o'rganish shu vaqtgacha til
+                                        o'rganishda so'z yodlash va eslab qolish muhim edi, endi esa bunday muammolar
+                                        bo'lmaydi.</p>
+                                    <br>
+                                </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="text-block mr-auto">
-                                <strong class="text-left">Avazbek Sharipov</strong>
-                                <p class="job text-left">O’qituvchi</p>
-                                <br>
-                                <p class="text-left f-content">Grammatik qoidalarsiz tilni oson o'rganish grammatika har qanday tilning asosi hisoblanadi, uni o'rganish uzoq vaqt talab etadi. Hozir esa bu to'siqlar yo'q.</p>
-                                <br>
+                            <div class="carousel-item">
+                                <div class="text-block mr-auto">
+                                    <strong class="text-left">Avazbek Sharipov</strong>
+                                    <p class="job text-left">O’qituvchi</p>
+                                    <br>
+                                    <p class="text-left f-content">Grammatik qoidalarsiz tilni oson o'rganish grammatika
+                                        har qanday tilning asosi hisoblanadi, uni o'rganish uzoq vaqt talab etadi. Hozir
+                                        esa bu to'siqlar yo'q.</p>
+                                    <br>
+                                </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="text-block mr-auto">
-                                <strong class="text-left">Madina Alimova</strong>
-                                <p class="job text-left">O’qituvchi</p>
-                                <br>
-                                <p class="text-left f-content">Har joyda va har vaqtda eshitish endi uyda yoki ko'chada va aniq  belgilanmagan vaqtda ham til o'rganish mumkin.</p>
-                                <br>
+                            <div class="carousel-item">
+                                <div class="text-block mr-auto">
+                                    <strong class="text-left">Madina Alimova</strong>
+                                    <p class="job text-left">O’qituvchi</p>
+                                    <br>
+                                    <p class="text-left f-content">Har joyda va har vaqtda eshitish endi uyda yoki
+                                        ko'chada va aniq belgilanmagan vaqtda ham til o'rganish mumkin.</p>
+                                    <br>
+                                </div>
                             </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="text-block mr-auto">
-                                <strong class="text-left">Sardor Mahkamov</strong>
-                                <p class="job text-left">O’qituvchi</p>
-                                <br>
-                                <p class="text-left f-content">Xorijiy til haqidagi to'liq bilim va ko'nikmalarga ega bo'lish ushbu uslubda til o'rganib bo'lgach, natijasidan qoniqish paydo bo'lishi kafolatlanadi.</p>
-                                <br>
+                            <div class="carousel-item">
+                                <div class="text-block mr-auto">
+                                    <strong class="text-left">Sardor Mahkamov</strong>
+                                    <p class="job text-left">O’qituvchi</p>
+                                    <br>
+                                    <p class="text-left f-content">Xorijiy til haqidagi to'liq bilim va ko'nikmalarga
+                                        ega bo'lish ushbu uslubda til o'rganib bo'lgach, natijasidan qoniqish paydo
+                                        bo'lishi kafolatlanadi.</p>
+                                    <br>
+                                </div>
                             </div>
-                          </div>
                         </div>
                         <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                           <img src="img/right-arrow_copy.png" alt="Oldingi">
@@ -365,12 +380,12 @@
                 </div>
             </div>
 
-              <div class="social-banner mt-8">
+            <div class="social-banner mt-8">
                 <div class="text-left">
                     <h3>Bizni ijtimoiy <br>tarmoqlarda kuzating</h3>
                     <a href="#" class="btn btn-lg btn-t-md btn-orange mt-4">Obuna bo'lish</a>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
 
@@ -383,7 +398,7 @@
                     NaN
                 </div>
             </div>
-            
+
             <div class="col-md-2 col-sm-4">
                 <div class="partner-card">
                     NaN
@@ -433,7 +448,7 @@
                 </div>
                 <div class="col-md-5 col-sm-12 subscribe-box">
                     <h2>Barcha savollaringizga<br>
-                        mutahassislarimiz bir necha<br> 
+                        mutahassislarimiz bir necha<br>
                         daqiqa ichida javob berishadi.<br>
                     </h2>
                     <h2><a href="#">info@smartbook.uz</a></h2>
@@ -465,6 +480,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+        integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#userPhone").mask("999 99 999 99 99");
+
+        });
+
+        $.fn.maskVal = function () {
+            return $(this).mask();
+        };
+
+    </script>
 
     <script>
         // 1598918400 = Unix timestamp for September 01, 2020 00:00:00
