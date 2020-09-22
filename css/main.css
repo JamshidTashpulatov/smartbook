@@ -757,8 +757,8 @@ ul#timer {
 }
 
 .partner-card {
-    width: 170px;
-    height: 81px;
+    margin-top: 7px;
+    padding: 44px 27px;
     background-color: #eaf2ff;
 }
 
@@ -960,6 +960,50 @@ ul#timer {
     .mx-8 {
         margin: 0 !important;
         padding: 0 !important;
+    }
+    .headphone img {
+        width: 200px; /* width of container */
+        height: 200px; /* height of container */
+        object-fit: cover;
+        object-position: 20% 10px;
+    }
+
+    .audio img {
+        top: 14rem;
+        left: 12rem;
+        max-width: 140px !important;
+        z-index: 1;
+        /* width: -150px; */
+        height: 40px;
+        object-fit: cover;
+        object-position: 20% 10px;
+    }
+
+    .form-control {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width:320px) {
+    .form-control {
+        margin-top: 4px;
+    }
+    .headphone img {
+        width: 200px; /* width of container */
+        height: 200px; /* height of container */
+        object-fit: cover;
+        object-position: 20% 10px;
+    }
+
+    .audio img {
+        top: 14rem;
+        left: 12rem;
+        max-width: 140px !important;
+        z-index: 1;
+        /* width: -150px; */
+        height: 40px;
+        object-fit: cover;
+        object-position: 20% 10px;
     }
 }
 
